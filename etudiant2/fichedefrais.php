@@ -5,42 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tableau d'Opérations</title>
     <link rel="stylesheet" href="index.css">
-    <style>
 
-
-
-        th, td {
-            border: 1px solid #ddd;
-            padding: 8px;
-            text-align: left;
-        }
-
-        th {
-            background-color: #8db1c9;
-            color: #fff;
-        }
-        button{
-            border: none; 
-            background: none; 
-            padding: 0; 
-            margin: 0;
-            transition: transform 0.2s;
-        }
-
-        button:hover {
-            transform: scale(2.2);
-        }
-
-        tr:hover {
-            background-color: #f5f5f5;
-        }
-
-        a {
-            text-decoration: none;
-            color: orange;
-        }
-
-    </style>
 </head>
 <body class = "fichedefrais-body">
 <?php
@@ -57,17 +22,17 @@ foreach($result as $ligne) {
 }
 ?>
 
-<p><h2>Fiche de frais : <a href="http://lab.sio-estran.fr:18102/KERFOURN/depot/logformulaire.php"><?php echo $VIS_NOM; ?></a></h2><div class="fichedefraisajouter-div"><a href="http://lab.sio-estran.fr:18102/KERFOURN/depot/gestionfraisforfait.php?VIS_ID=<?php echo $VIS_ID; ?>"><h1>Ajouter</h1><img src="http://lab.sio-estran.fr:18102/KERFOURN/depot/images/ajouter.png" width="50" height="50" /></div></a></p>
+<p><h2>Fiche de frais : <a class = "fichedefrais-a" href="http://lab.sio-estran.fr:18102/KERFOURN/depot/logformulaire.php"><?php echo $VIS_NOM; ?></a></h2><div class="fichedefraisajouter-div"><a class = "fichedefrais-a" href="http://lab.sio-estran.fr:18102/KERFOURN/depot/gestionfraisforfait.php?VIS_ID=<?php echo $VIS_ID; ?>"><div><h1>Ajouter</h1><img src="http://lab.sio-estran.fr:18102/KERFOURN/depot/images/ajouter.png" width="50" height="50" /></div></a></div></p>
 
 <table class="fichedefrais-table">
     <thead>
-        <tr>
-            <th>Date</th>
-            <th>Montant</th>
-            <th>Etat</th>
-            <th>Supprimer</th>
-            <th>Modifier</th>
-            <th>Voir</th>
+        <tr class = "fichedefrais-tr">
+            <th class = "fichedefrais-th">Date</th>
+            <th class = "fichedefrais-th">Montant</th>
+            <th class = "fichedefrais-th">Etat</th>
+            <th class = "fichedefrais-th">Supprimer</th>
+            <th class = "fichedefrais-th">Modifier</th>
+            <th class = "fichedefrais-th">Voir</th>
         </tr>
     </thead>
     <tbody>
@@ -96,32 +61,32 @@ foreach($result as $ligne) {
                 }
             }
         ?>
-        <tr>
-            <td><?= $FFR_ANNEE ?> <?= $FFR_MOIS ?></td>
-            <td><?= $FFR_MONTANT_VALIDE?><h>€</h></td>
-            <td><?= $ETA ?></td>
-            <td>
+        <tr class = "fichedefrais-tr">
+            <td class = "fichedefrais-td"><?= $FFR_ANNEE ?> <?= $FFR_MOIS ?></td>
+            <td class = "fichedefrais-td"><?= $FFR_MONTANT_VALIDE?><h>€</h></td>
+            <td class = "fichedefrais-td"><?= $ETA ?></td>
+            <td class = "fichedefrais-td">
                 <?php if ($ETA_ID == "CR") { ?>
                     <form action="delete.php" method="GET">
                         <input type="hidden" name="FFR_ID" value="<?= $FFR_ID ?>">
-                        <button type="submit" ><img src="http://lab.sio-estran.fr:18102/KERFOURN/depot/images/supprimer.png" alt="Supprimer" width="30" height="30"></button>
+                        <button type="submit" class = "fichedefrais-button" ><img src="http://lab.sio-estran.fr:18102/KERFOURN/depot/images/supprimer.png" alt="Supprimer" width="30" height="30"></button>
                     </form>
                 <?php } ?>
             </td>
-            <td>
+            <td class = "fichedefrais-td">
                 <?php if ($ETA_ID == "CR") { ?>
                     <form action="gestionupdate.php" method="GET">
                         <input type="hidden" name="FFR_ID" value="<?= $FFR_ID ?>">
                         <input type="hidden" name="VIS_ID" value="<?= $VIS_ID ?>">
-                        <button type="submit"><img src="http://lab.sio-estran.fr:18102/KERFOURN/depot/images/modifier.png" alt="Modifier" width="30" height="30"></button>
+                        <button type="submit" class = "fichedefrais-button"><img src="http://lab.sio-estran.fr:18102/KERFOURN/depot/images/modifier.png" alt="Modifier" width="30" height="30"></button>
                     </form>
                 <?php } ?>
             </td>
-            <td>
+            <td class = "fichedefrais-td">
                 <form action="gestionselect.php" method="GET">
                     <input type="hidden" name="FFR_ID" value="<?= $FFR_ID ?>">
                     <input type="hidden" name="VIS_ID" value="<?= $VIS_ID ?>">
-                    <button type="submit"><img src="http://lab.sio-estran.fr:18102/KERFOURN/depot/images/voir.png" alt="Voir" width="30" height="30"></button>
+                    <button type="submit" class = "fichedefrais-button"><img src="http://lab.sio-estran.fr:18102/KERFOURN/depot/images/voir.png" alt="Voir" width="30" height="30"></button>
                 </form>
             </td>
         </tr>
