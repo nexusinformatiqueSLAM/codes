@@ -2,12 +2,9 @@
 <html>
 <head>
 	<title>Gestion des Frais</title>
+	<link rel="stylesheet" href="index.css">
 	<style>
-		body {
-			background-color: rgb(123,170,219,255);
-			color: white;
-			font-family: Verdana;
-		}
+
 		h1 {
 			font-size: 36px;
 			font-style: italic;
@@ -68,7 +65,7 @@
 		}
 	</style>
 </head>
-<body>
+<body class="gestrionfraisforfait-body">
 	<?php
     if ($_SERVER["REQUEST_METHOD"] == "GET") {
         $VIS_ID = $_GET["VIS_ID"];
