@@ -2,12 +2,9 @@
 <html>
 <head>
 	<title>Modfication des Frais</title>
+	<link rel="stylesheet" href="index.css">
 	<style>
-		body {
-			background-color: rgb(123,170,219,255);
-			color: white;
-			font-family: Verdana;
-		}
+
 		h1 {
 			font-size: 36px;
 			font-style: italic;
@@ -29,24 +26,7 @@
 			display: block;
 			margin-bottom: 10px;
 		}
-		input[type="text"] {
-			display: block;
-			margin-bottom: 20px;
-			padding: 5px;
-			border-radius: 5px;
-			border: none;
-			box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
-			width: 200px;
-		}
-		input[type="submit"] {
-			background-color: #333;
-			color: white;
-			padding: 10px 20px;
-			border: none;
-			border-radius: 5px;
-			box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
-			cursor: pointer;
-		}
+
 		table {
 			margin-top: 50px;
 			border-collapse: collapse;
@@ -60,15 +40,10 @@
 		th {
 			color: white;
 		}
-		.maDiv {
-			width: 100%;
-			height: 50%;
-			background-color: white;
-			color: rgb(121, 153, 221);
-		}
+		
 	</style>
 </head>
-<body>
+<body class="gestionupdate-body">
 	<?php
 	    if ($_SERVER["REQUEST_METHOD"] == "GET") {
 			$FFR_ID = $_GET["FFR_ID"];
@@ -77,7 +52,7 @@
 	
 	?>
 
-    <div class="maDiv">
+    <div class="gestionupdate-div">
         <h1><a href="http://lab.sio-estran.fr:18102/KERFOURN/depot/fichedefrais.php?VIS_ID=<?= $VIS_ID ?>">Modfication des Frais</a> <i class="fa-solid fa-hippo"></i></h1>
     </div>
     <?php
@@ -132,7 +107,7 @@
                 </tr>
             </table>
         </fieldset>
-        <input type="submit" value="Soumettre la requête">
+        <input type="submit" value="Soumettre la requête" class="gestionupdate-input">
     </form>
 </body>
 </html>
