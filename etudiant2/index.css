@@ -99,11 +99,42 @@
     
 }
 
+
+
+
+
+
+
+
+
+
+
 .gestrionfraisforfait-body {
     background-color: rgb(123,170,219,255);
     color: white;
     font-family: Verdana;
 }
+
+
+.gestrionfraisforfait-h1 {
+    font-size: 36px;
+    font-style: italic;
+    display: inline-block;
+    margin: 0;
+    padding: 10px;
+}
+.gestrionfraisforfait-img {
+    display: inline-block;
+    height: 50px;
+    width: 50px;
+    margin-left: 10px;
+}
+.gestrionfraisforfait-form {
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+
 
 
 
@@ -133,10 +164,53 @@
     height: 50%;
     background-color: white;
     color: rgb(121, 153, 221);
+    
 }
 
 .gestionupdate-body {
     background-color: rgb(123,170,219,255);
     color: white;
     font-family: Verdana;
+}
+
+.gestionupdate-h1 {
+    font-size: 36px;
+    font-style: italic;
+    display: inline-block;
+    margin: 0;
+    padding: 10px;
+}
+.gestionupdate-img {
+    display: inline-block;
+    height: 50px;
+    width: 50px;
+    margin-left: 10px;
+}
+.gestionupdate-form {
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+.gestionupdate-label {
+    display: block;
+    margin-bottom: 10px;
+}
+
+.gestionupdate-table {
+    margin-top: 50px;
+    border-collapse: collapse;
+    width: 100%;
+}
+.gestionupdate-th, .gestionupdate-td {
+    padding: 10px;
+    text-align: left;
+    border-bottom: 0px solid white;
+}
+.gestionupdate-th {
+    color: white;
+}
+
+.gestionupdate-table {
+    margin-top: 50px;
+    border-collapse: collapse;
+    width: 100%;
 }
