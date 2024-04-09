@@ -34,6 +34,12 @@
 
 
 
+
+
+
+
+
+
 .fichedefrais-body {
     background-color: rgb(123,170,219,255);
     color: white;
@@ -134,7 +140,28 @@
     margin-bottom: 50px;
 }
 
-
+.gestionfraisforfait-input[type="text"], input[type="number"] {
+    display: block;
+    margin-bottom: 20px;
+    padding: 5px;
+    border-radius: 5px;
+    border: none;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+    width: 200px;
+}
+.gestionfraisforfait-input[type="submit"] {
+    background-color: #333;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+    cursor: pointer;
+}
+.gestionfraisforfait-label {
+    display: block;
+    margin-bottom: 10px;
+}
 
 
 
@@ -213,4 +240,23 @@
     margin-top: 50px;
     border-collapse: collapse;
     width: 100%;
+}
+.gestionfraisforfait-table {
+    margin-top: 50px;
+    border-collapse: collapse;
+    width: 100%;
+}
+.gestionfraisforfait-th, .gestionfraisforfait-td {
+    padding: 10px;
+    text-align: left;
+    border-bottom: 0px solid white;
+}
+.gestionfraisforfait-th {
+    color: white;
+}
+.gestionfraisforfait-Div {
+    width: 100%;
+    height: 50%;
+    background-color: white;
+    color: rgb(121, 153, 221);
 }
