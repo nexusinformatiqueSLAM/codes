@@ -1,3 +1,5 @@
+/*logformulaire.php*/
+
 .login-body {
     font-family: Arial, sans-serif;
     background-color: #f4f4f4;
@@ -39,6 +41,7 @@
 
 
 
+/*fichedefrais.php*/
 
 .fichedefrais-body {
     background-color: rgb(123,170,219,255);
@@ -115,6 +118,91 @@
 
 
 
+
+
+
+
+
+
+
+/*gestionupdate.php*/
+
+.gestionupdate-input[type="text"] {
+    display: block;
+    margin-bottom: 20px;
+    padding: 5px;
+    border-radius: 5px;
+    border: none;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+    width: 200px;
+}
+.gestionupdate-input[type="submit"] {
+    background-color: #333;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+    cursor: pointer;
+}
+
+.gestionupdate-div {
+    width: 100%;
+    height: 50%;
+    background-color: white;
+    color: rgb(121, 153, 221);
+    
+}
+.gestionupdate-body {
+    background-color: rgb(123,170,219,255);
+    color: white;
+    font-family: Verdana;
+}
+
+.gestionupdate-h1 {
+    font-size: 36px;
+    font-style: italic;
+    display: inline-block;
+    margin: 0;
+    padding: 10px;
+}
+.gestionupdate-img {
+    display: inline-block;
+    height: 50px;
+    width: 50px;
+    margin-left: 10px;
+}
+.gestionupdate-form {
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+.gestionupdate-label {
+    display: block;
+    margin-bottom: 10px;
+}
+
+.gestionupdate-table {
+    margin-top: 50px;
+    border-collapse: collapse;
+    width: 100%;
+}
+.gestionupdate-th, .gestionupdate-td {
+    padding: 10px;
+    text-align: left;
+    border-bottom: 0px solid white;
+}
+.gestionupdate-th {
+    color: white;
+}
+
+
+
+
+
+
+/*gestionfraisforfait.php*/
+
+
 .gestrionfraisforfait-body {
     background-color: rgb(123,170,219,255);
     color: white;
@@ -162,85 +250,6 @@
     display: block;
     margin-bottom: 10px;
 }
-
-
-
-
-
-.gestionupdate-input[type="text"] {
-    display: block;
-    margin-bottom: 20px;
-    padding: 5px;
-    border-radius: 5px;
-    border: none;
-    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
-    width: 200px;
-}
-.gestionupdate-input[type="submit"] {
-    background-color: #333;
-    color: white;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
-    cursor: pointer;
-}
-
-.gestionupdate-div {
-    width: 100%;
-    height: 50%;
-    background-color: white;
-    color: rgb(121, 153, 221);
-    
-}
-
-.gestionupdate-body {
-    background-color: rgb(123,170,219,255);
-    color: white;
-    font-family: Verdana;
-}
-
-.gestionupdate-h1 {
-    font-size: 36px;
-    font-style: italic;
-    display: inline-block;
-    margin: 0;
-    padding: 10px;
-}
-.gestionupdate-img {
-    display: inline-block;
-    height: 50px;
-    width: 50px;
-    margin-left: 10px;
-}
-.gestionupdate-form {
-    margin-top: 50px;
-    margin-bottom: 50px;
-}
-.gestionupdate-label {
-    display: block;
-    margin-bottom: 10px;
-}
-
-.gestionupdate-table {
-    margin-top: 50px;
-    border-collapse: collapse;
-    width: 100%;
-}
-.gestionupdate-th, .gestionupdate-td {
-    padding: 10px;
-    text-align: left;
-    border-bottom: 0px solid white;
-}
-.gestionupdate-th {
-    color: white;
-}
-
-.gestionupdate-table {
-    margin-top: 50px;
-    border-collapse: collapse;
-    width: 100%;
-}
 .gestionfraisforfait-table {
     margin-top: 50px;
     border-collapse: collapse;
@@ -267,6 +276,7 @@
 
 
 
+/*gestionselect.php*/
 
 .gestionselect-body {
     background-color: rgb(123, 170, 219, 255);
