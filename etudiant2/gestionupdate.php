@@ -3,45 +3,7 @@
 <head>
 	<title>Modfication des Frais</title>
 	<link rel="stylesheet" href="index.css">
-	<style>
 
-		h1 {
-			font-size: 36px;
-			font-style: italic;
-			display: inline-block;
-			margin: 0;
-			padding: 10px;
-		}
-		img {
-			display: inline-block;
-			height: 50px;
-			width: 50px;
-			margin-left: 10px;
-		}
-		form {
-			margin-top: 50px;
-			margin-bottom: 50px;
-		}
-		label {
-			display: block;
-			margin-bottom: 10px;
-		}
-
-		table {
-			margin-top: 50px;
-			border-collapse: collapse;
-			width: 100%;
-		}
-		th, td {
-			padding: 10px;
-			text-align: left;
-			border-bottom: 0px solid white;
-		}
-		th {
-			color: white;
-		}
-		
-	</style>
 </head>
 <body class="gestionupdate-body">
 	<?php
@@ -53,7 +15,7 @@
 	?>
 
     <div class="gestionupdate-div">
-        <h1><a href="http://lab.sio-estran.fr:18102/KERFOURN/depot/fichedefrais.php?VIS_ID=<?= $VIS_ID ?>">Modfication des Frais</a> <i class="fa-solid fa-hippo"></i></h1>
+        <h1 class="gestionupdate-h1"><a href="http://lab.sio-estran.fr:18102/KERFOURN/depot/fichedefrais.php?VIS_ID=<?= $VIS_ID ?>">Modfication des Frais</a> <i class="fa-solid fa-hippo"></i></h1>
     </div>
     <?php
 
@@ -80,7 +42,7 @@
         $FFR_ID = $ligne['FFR_ID'];
     }
     ?>
-    <form action="update.php" method="get">
+    <form action="update.php" method="get" class="gestionupdate-form">
         <input type="hidden" name="FFR_ID" value="<?php echo $FFR_ID; ?>">
         <legend><h2>Date de la fiche de frais <?php echo $FFR_MOIS; echo " "; echo $FFR_ANNEE;?></h2> </legend>
         <br />
@@ -88,22 +50,22 @@
 			<input type="hidden" name="VIS_ID" value="<?php echo $VIS_ID; ?>">
             <legend>Frais au forfait</legend>
 			
-            <table>
+            <table class="gestionupdate-table">
                 <tr>
-                    <th>Repas midi :</th>
-                    <td><input type="number" id="repas" name="repas" required></td>
+                    <th class="gestionupdate-th">Repas midi :</th>
+                    <td class="gestionupdate-td"><input type="number" id="repas" name="repas" required></td>
                 </tr>
                 <tr>
-                    <th>Nuitées :</th>
-                    <td><input type="number" id="nuitees" name="nuitees" required></td>
+                    <th class="gestionupdate-th">Nuitées :</th>
+                    <td class="gestionupdate-td"><input type="number" id="nuitees" name="nuitees" required></td>
                 </tr>
                 <tr>
-                    <th>Etape :</th>
-                    <td><input type="number" id="etape" name="etape" required></td>
+                    <th class="gestionupdate-th">Etape :</th>
+                    <td class="gestionupdate-td"><input type="number" id="etape" name="etape" required></td>
                 </tr>
                 <tr>
-                    <th>Km :</th>
-                    <td><input type="number" id="km" name="km" required></td>
+                    <th class="gestionupdate-th">Km :</th>
+                    <td class="gestionupdate-td"><input type="number" id="km" name="km" required></td>
                 </tr>
             </table>
         </fieldset>
