@@ -1,99 +1,18 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Suivi de remboursement des Frais</title>
-    <style>
-        body {
-            background-color: rgb(123, 170, 219, 255);
-            color: white;
-            font-family: Verdana;
-        }
+    <title>Suivi de remboursement des Fraisss</title>
+    <link rel="stylesheet" href="index.css">
 
-        h1 {
-            font-size: 36px;
-            font-style: italic;
-            display: inline-block;
-            margin: 0;
-            padding: 10px;
-        }
-
-        img {
-            display: inline-block;
-            height: 50px;
-            width: 50px;
-            margin-left: 10px;
-        }
-
-        form {
-            margin-top: 50px;
-            margin-bottom: 50px;
-        }
-
-        label {
-            display: block;
-            margin-bottom: 10px;
-        }
-
-        input[type="text"],
-        input[type="number"] {
-            display: block;
-            margin-bottom: 20px;
-            padding: 5px;
-            border-radius: 5px;
-            border: none;
-            box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
-            width: 200px;
-        }
-
-        input[type="submit"] {
-            background-color: #333;
-            color: white;
-            padding: 10px 20px;
-            border: none;
-            border-radius: 5px;
-            box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
-            cursor: pointer;
-        }
-
-        table {
-            margin-top: 50px;
-            border-collapse: collapse;
-            width: 100%;
-        }
-
-        th,
-        td {
-            padding: 10px;
-            text-align: left;
-            border-bottom: 1px solid white; /* Changed from 0px to 1px */
-        }
-
-        th {
-            color: white;
-        }
-
-        .maDiv {
-            width: 100%;
-            height: 50%;
-            background-color: white;
-            color: rgb(121, 153, 221);
-        }
-		.maDiv2 {
-            width: 100%;
-            height: 60%;
-            background-color: rgb(226,238,254,255);
-            color: rgb(121, 153, 221);
-        }
-    </style>
 </head>
-<body>
+<body class="gestionselect-body">
 <?php
 if ($_SERVER["REQUEST_METHOD"] == "GET") {
     $VIS_ID = $_GET["VIS_ID"];
     $FFR_ID = $_GET["FFR_ID"];
 }
 $cnxBDD = new mysqli("localhost", "root", "Iroise29", "nexusinformatique", 3306);
-$sql = "SELECT VIS_ID, VIS_NOM, VIS_PRENOM, VIS_ADRESSE, VIS_CP, VIS_VILLE, VIS_DATE_EMBAUCHE FROM visiteur WHERE VIS_ID='$VIS_ID'"; // Changed 'ED' to '$VIS_ID'
+$sql = "SELECT VIS_ID, VIS_NOM, VIS_PRENOM, VIS_ADRESSE, VIS_CP, VIS_VILLE, VIS_DATE_EMBAUCHE FROM visiteur WHERE VIS_ID='$VIS_ID'";
 $result = $cnxBDD->query($sql);
 
 foreach($result as $ligne) {
@@ -104,22 +23,22 @@ foreach($result as $ligne) {
 
 ?>
 
-<div class="maDiv">
-    <h1><a href="http://lab.sio-estran.fr:18102/KERFOURN/depot/fichedefrais.php?VIS_ID=<?= $VIS_ID ?>">Suivi de remboursement des Frais </a><i class="fa-solid fa-hippo"></i></h1>
+<div class="gestionselect-Div">
+    <h1 class="gestionselect-h1"><a href="http://lab.sio-estran.fr:18102/KERFOURN/depot/fichedefrais.php?VIS_ID=<?= $VIS_ID ?>">Suivi de remboursement des Frais </a><i class="fa-solid fa-hippo"></i></h1>
 </div>
-<div class="maDiv2">
+<div class="gestionselect-Div2">
 	<h2>Fiche de frais : <?php echo $VIS_NOM; ?></h2>
 </div>
-<table>
+<table class="gestionselect-table">
     <thead>
     <tr>
-        <th>Repas midi</th>
-        <th>Nuitée</th>
-        <th>Etape</th>
-        <th>Km</th>
-        <th>Situation</th>
-        <th>Date opération</th> 
-        <th>Remboursement</th>
+        <th class="gestionselect-th">Repas midi</th>
+        <th class="gestionselect-th">Nuitée</th>
+        <th class="gestionselect-th">Etape</th>
+        <th class="gestionselect-th">Km</th>
+        <th class="gestionselect-th">Situation</th>
+        <th class="gestionselect-th">Date opération</th> 
+        <th class="gestionselect-th">Remboursement</th>
     </tr>
     </thead>
     <tbody>
@@ -152,7 +71,7 @@ foreach($result as $ligne) {
     $result = $cnxBDD->query($sql);
 	?>
 	<tr>
-	<td>
+	<td class="gestionselect-td">
 	<?php
     foreach ($result as $ligne) {
         $FOR_ID = $ligne['FOR_ID'];
@@ -165,7 +84,7 @@ foreach($result as $ligne) {
 	?>
 	</td>
 
-	<td>
+	<td class="gestionselect-td">
 	<?php
 	foreach ($result as $ligne) {
         $FOR_ID = $ligne['FOR_ID'];
@@ -178,7 +97,7 @@ foreach($result as $ligne) {
 	?>
 
 	</td>
-	<td>
+	<td class="gestionselect-td">
 	<?php
 	foreach ($result as $ligne) {
         $FOR_ID = $ligne['FOR_ID'];
@@ -191,7 +110,7 @@ foreach($result as $ligne) {
 	?>
 
 	</td>
-	<td>
+	<td class="gestionselect-td">
 	<?php
 	foreach ($result as $ligne) {
         $FOR_ID = $ligne['FOR_ID'];
@@ -204,9 +123,9 @@ foreach($result as $ligne) {
 	?>
 
 	</td>
-	<td><?= $ETA ?></td>
-	<td><?= $FFR_DATE_MODIF ?></td>
-	<td><?= $FFR_MONTANT_VALIDE ?></td>
+	<td class="gestionselect-td"><?= $ETA ?></td>
+	<td class="gestionselect-td"><?= $FFR_DATE_MODIF ?></td>
+	<td class="gestionselect-td"><?= $FFR_MONTANT_VALIDE ?></td>
 	</tr>
 	<?php
 
