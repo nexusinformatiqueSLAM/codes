@@ -57,7 +57,7 @@
 .fichedefraisajouter-div{
     position: relative;
     padding: 10px;
-    background-color: rgb(123,170,219,255);
+    background-color: #7aa9db;
     color: white;
     border-radius: 5px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.9);
@@ -148,9 +148,12 @@
 
 .gestionupdate-div {
     width: 100%;
-    height: 50%;
+    top:0%;
+    height: 100%;
+    position: relative;
     background-color: white;
     color: rgb(121, 153, 221);
+    margin: 0 auto;
     
 }
 .gestionupdate-body {
@@ -194,6 +197,10 @@
 .gestionupdate-th {
     color: white;
 }
+
+
+
+
 
 
 
@@ -265,10 +272,20 @@
 }
 .gestionfraisforfait-Div {
     width: 100%;
-    height: 50%;
+    top:0%;
+    height: 100%;
+    position: relative;
     background-color: white;
     color: rgb(121, 153, 221);
+    margin: 0 auto;
+
 }
+
+
+
+
+
+
 
 
 
@@ -303,21 +320,47 @@
     padding: 10px;
     text-align: left;
     border-bottom: 1px solid white;
+    padding: 8px;
+    text-align: center;
 }
 
 .gestionselect-th {
     color: white;
+    border: 1px solid #ccc;
+    padding: 8px;
+    text-align: center;
 }
 
 .gestionselect-Div {
     width: 100%;
-    height: 50%;
+    top:0%;
+    height: 100%;
+    position: relative;
     background-color: white;
     color: rgb(121, 153, 221);
+    margin: 0 auto;
 }
 .gestionselect-Div2 {
     width: 100%;
     height: 60%;
     background-color: rgb(226,238,254,255);
     color: rgb(121, 153, 221);
+}
+
+
+
+
+
+
+/*css général*/
+
+.GSB-div {
+    position: absolute;
+    top: 0px;
+    left: 92%;
+    z-index: 9999;
+}
+.GSB-img {
+    width: 110px;
+    height: 67px;
 }
