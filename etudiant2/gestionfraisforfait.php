@@ -12,8 +12,13 @@
 	?>
 
 	<div class="gestionfraisforfait-Div">
-		<h1 class="gestrionfraisforfait-h1"><a href="http://lab.sio-estran.fr:18102/KERFOURN/depot/fichedefrais.php?VIS_ID=<?= $VIS_ID ?>">Gestion des Frais </a><i class="fa-solid fa-hippo"></i></h1>
+		<h1 class="gestrionfraisforfait-h1"><a href="http://lab.sio-estran.fr:18102/KERFOURN/depot/fichedefrais.php?VIS_ID=<?= $VIS_ID ?>" class="fichedefrais-a">Gestion des Frais </a><i class="fa-solid fa-hippo"></i></h1>
+			<div class="GSB-div">
+				<img src="http://lab.sio-estran.fr:18102/KERFOURN/depot/images/gsb.png" class="GSB-img"/>
+			</div>
+
 	</div>
+
 	
 	<form action="insert.php" method="get" class="gestrionfraisforfait-form">
 		<input type="hidden" name="VIS_ID" value="<?php echo $VIS_ID; ?>">
