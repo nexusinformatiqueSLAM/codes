@@ -20,15 +20,35 @@ foreach($result as $ligne) {
     $VIS_NOM = $ligne['VIS_NOM'];
     $VIS_PRENOM = $ligne['VIS_PRENOM'];
 }
+$cnxBDD = new mysqli("localhost", "root", "Iroise29", "nexusinformatique", 3306);
+$sql = "SELECT FFR_ID, FFR_ANNEE, FFR_MOIS, FFR_MONTANT_VALIDE, ETA_ID, VIS_ID, FFR_DATE_MODIF FROM fiche_frais WHERE FFR_ID='$FFR_ID' ORDER BY FFR_ANNEE, FFR_MOIS";
+$result = $cnxBDD->query($sql);
 
+foreach ($result as $ligne) {
+    $FFR_ANNEE = $ligne['FFR_ANNEE'];
+    $FFR_MOIS = $ligne['FFR_MOIS'];
+    $FFR_MONTANT_VALIDE = $ligne['FFR_MONTANT_VALIDE'];
+    $ETA_ID = $ligne['ETA_ID'];
+    $VIS_ID = $ligne['VIS_ID'];
+    $FFR_ID = $ligne['FFR_ID'];
+    $FFR_DATE_MODIF = $ligne['FFR_DATE_MODIF'];
+}
 ?>
 
 <div class="gestionselect-Div">
-    <h1 class="gestionselect-h1"><a href="http://lab.sio-estran.fr:18102/KERFOURN/depot/fichedefrais.php?VIS_ID=<?= $VIS_ID ?>">Suivi de remboursement des Frais </a><i class="fa-solid fa-hippo"></i></h1>
+    <h1 class="gestionselect-h1"><a href="http://lab.sio-estran.fr:18102/KERFOURN/depot/fichedefrais.php?VIS_ID=<?= $VIS_ID ?>" class="fichedefrais-a">Suivi de remboursement des Frais </a><i class="fa-solid fa-hippo"></i></h1>
+    <div class="GSB-div">
+		<img src="http://lab.sio-estran.fr:18102/KERFOURN/depot/images/gsb.png" class="GSB-img"/>
+</div>
+
 </div>
 <div class="gestionselect-Div2">
 	<h2>Fiche de frais : <?php echo $VIS_NOM; ?></h2>
 </div>
+<br>
+<h1><p>Période      |      <?php echo "$FFR_MOIS"?> <?php echo "$FFR_ANNEE"?></p></h1>
+<br>
+<h2>Frais au forfais</h2>
 <table class="gestionselect-table">
     <thead>
     <tr>
@@ -43,19 +63,6 @@ foreach($result as $ligne) {
     </thead>
     <tbody>
     <?php
-    $cnxBDD = new mysqli("localhost", "root", "Iroise29", "nexusinformatique", 3306);
-    $sql = "SELECT FFR_ID, FFR_ANNEE, FFR_MOIS, FFR_MONTANT_VALIDE, ETA_ID, VIS_ID, FFR_DATE_MODIF FROM fiche_frais WHERE FFR_ID='$FFR_ID' ORDER BY FFR_ANNEE, FFR_MOIS";
-    $result = $cnxBDD->query($sql);
-
-    foreach ($result as $ligne) {
-        $FFR_ANNEE = $ligne['FFR_ANNEE'];
-        $FFR_MOIS = $ligne['FFR_MOIS'];
-        $FFR_MONTANT_VALIDE = $ligne['FFR_MONTANT_VALIDE'];
-        $ETA_ID = $ligne['ETA_ID'];
-        $VIS_ID = $ligne['VIS_ID'];
-        $FFR_ID = $ligne['FFR_ID'];
-		$FFR_DATE_MODIF = $ligne['FFR_DATE_MODIF'];
-    }
 
 	if ($ETA_ID== "CL" ){
 		$ETA="Clôturé";
