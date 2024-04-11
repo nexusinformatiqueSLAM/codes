@@ -8,6 +8,7 @@ $cnxBDD = new mysqli($servername, $username, $password, $database, 3306);
 
 if ($_SERVER["REQUEST_METHOD"] == "GET") {
     $FFR_ID = $_GET["FFR_ID"];
+    $VIS_ID = $_GET["VIS_ID"];
 
     $sql = "DELETE FROM ligne_frais_forfait WHERE FFR_ID='$FFR_ID'";
     echo "$sql";
