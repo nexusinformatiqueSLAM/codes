@@ -15,7 +15,10 @@
 	?>
 
     <div class="gestionupdate-div">
-        <h1 class="gestionupdate-h1"><a href="http://lab.sio-estran.fr:18102/KERFOURN/depot/fichedefrais.php?VIS_ID=<?= $VIS_ID ?>">Modfication des Frais</a> <i class="fa-solid fa-hippo"></i></h1>
+        <h1 class="gestionupdate-h1"><a href="http://lab.sio-estran.fr:18102/KERFOURN/depot/fichedefrais.php?VIS_ID=<?= $VIS_ID ?>" class="fichedefrais-a">Modfication des Frais</a> <i class="fa-solid fa-hippo"></i></h1>
+        <div class="GSB-div">
+				<img src="http://lab.sio-estran.fr:18102/KERFOURN/depot/images/gsb.png" class="GSB-img"/>
+    </div>
     </div>
     <?php
 
