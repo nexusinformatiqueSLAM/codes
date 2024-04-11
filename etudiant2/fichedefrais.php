@@ -23,7 +23,9 @@ foreach($result as $ligne) {
 ?>
 
 <p><h2>Fiche de frais : <a class = "fichedefrais-a" href="http://lab.sio-estran.fr:18102/KERFOURN/depot/logformulaire.php"><?php echo $VIS_NOM; ?></a></h2><div class="fichedefraisajouter-div"><a class = "fichedefrais-a" href="http://lab.sio-estran.fr:18102/KERFOURN/depot/gestionfraisforfait.php?VIS_ID=<?php echo $VIS_ID; ?>"><div><h1>Ajouter</h1><img src="http://lab.sio-estran.fr:18102/KERFOURN/depot/images/ajouter.png" width="50" height="50" /></div></a></div></p>
-
+    <div class="GSB-div">
+				<img src="http://lab.sio-estran.fr:18102/KERFOURN/depot/images/gsb.png" class="GSB-img"/>
+    </div>
 <table class="fichedefrais-table">
     <thead>
         <tr class = "fichedefrais-tr">
