@@ -71,6 +71,7 @@ foreach($result as $ligne) {
                 <?php if ($ETA_ID == "CR") { ?>
                     <form action="delete.php" method="GET">
                         <input type="hidden" name="FFR_ID" value="<?= $FFR_ID ?>">
+                        <input type="hidden" name="VIS_ID" value="<?= $VIS_ID ?>">
                         <button type="submit" class = "fichedefrais-button" ><img src="http://lab.sio-estran.fr:18102/KERFOURN/depot/images/supprimer.png" alt="Supprimer" width="30" height="30"></button>
                     </form>
                 <?php } ?>
