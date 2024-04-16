@@ -19,6 +19,7 @@ if ($cnxBDD->connect_error) {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Validation des frais par visiteur</title>
+    <link rel="stylesheet" href="index.css">
     <style>
         body {
             background-color: orange;
@@ -35,12 +36,13 @@ if ($cnxBDD->connect_error) {
             text-align: left;
         }
         th {
-            background-color: #000;
+            background-color: #333;
         }
     </style>
 </head>
 
-<body>
+<body class="body-style">
+    <form method="POST" action="">
     <h1>Validation des frais par visiteur :</h1>
     <form method="POST" action="">
         <select name="nom" required>
@@ -57,7 +59,7 @@ if ($cnxBDD->connect_error) {
             $query->close();
             ?>
         </select>
-        <p>Mois / Annee :
+        <p>Mois / Annee :  <!-- formulaire de choix du mois et annee -->
             <select name="mois" required>
                 <option disabled selected hidden></option>
                 <?php
@@ -155,10 +157,10 @@ if ($cnxBDD->connect_error) {
                     <td><input type="text" name="etape" value="<?php echo isset($fr_nui_tt) ? $fr_nui_tt : '0'; ?>" disabled></td>
                     <td><input type="text" name="km" value="<?php echo isset($fr_etp_tt) ? $fr_etp_tt : '0'; ?>" disabled></td>
                     <td>
-                        <input type="radio" id="test1" name="situ" value="valide" checked />
+                        <input type="radio" id="test1" name="situ" value="valide" />
                         <label for="test1">Valide</label>
                         <br />
-                        <input type="radio" id="test2" name="situ" value="non_valide" />
+                        <input type="radio" id="test2" name="situ" value="non_valide" checked/>
                         <label for="test2">Non valide</label>
                     </td>
                 </tr>
@@ -188,7 +190,7 @@ if ($cnxBDD->connect_error) {
             $ffr_mois = $_POST['mois'];
             $ffr_annee = $_POST['annee'];
         
-            // Exécuter la requête SQL pour mettre à jour l'état de la fiche dans la base de données
+            // Exécution de  la requête SQL pour mettre à jour l'état de la fiche dans la base de données
             $query_update = $cnxBDD->prepare("UPDATE fiche_frais SET ETA_ID = 'CL' WHERE VIS_ID = ? AND FFR_MOIS = ? AND FFR_ANNEE = ?");
             $query_update->bind_param("sss", $vis_id, $ffr_mois, $ffr_annee);
             $query_update->execute();
